@@ -935,6 +935,10 @@ def create_app(headless: bool, useragent: str, debug: bool, browser_type: str, t
 
 app = create_app( headless=True, useragent="default", debug=False, browser_type="chromium", thread=1, proxy_support=False, use_random_config=False, browser_name="chrome", browser_version="latest" )    
 
+@app.get("/health")
+async def health():
+        return "ok"
+
 if __name__ == '__main__':
     args = parse_args()
     browser_types = [
