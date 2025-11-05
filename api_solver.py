@@ -29,6 +29,9 @@ COLORS = {
     'RESET': '\033[0m',
 }
 
+os.environ["BROWSERFORGE_DATA_DIR"] = "/tmp/browserforge"
+os.makedirs("/tmp/browserforge", exist_ok=True)
+
 
 class CustomLogger(logging.Logger):
     @staticmethod
