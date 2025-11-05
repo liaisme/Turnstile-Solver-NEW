@@ -3,7 +3,7 @@ import json
 import logging
 from typing import Dict, Any, Optional, Union
 
-DB_PATH = "results.db"
+DB_PATH = "/tmp/results.db"
 
 # PRAGMA настройки для оптимизации БД
 PRAGMA_SETTINGS = [
