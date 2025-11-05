@@ -933,6 +933,7 @@ def create_app(headless: bool, useragent: str, debug: bool, browser_type: str, t
     server = TurnstileAPIServer(headless=headless, useragent=useragent, debug=debug, browser_type=browser_type, thread=thread, proxy_support=proxy_support, use_random_config=use_random_config, browser_name=browser_name, browser_version=browser_version)
     return server.app
 
+app = create_app( headless=True, useragent="default", debug=False, browser_type="chromium", thread=1, proxy_support=False, use_random_config=False, browser_name="chrome", browser_version="latest" )    
 
 if __name__ == '__main__':
     args = parse_args()
